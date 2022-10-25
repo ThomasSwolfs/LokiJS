@@ -27,8 +27,8 @@
     "test:node": "istanbul cover --dir coverage/nodejs node_modules/jasmine/bin/jasmine.js",
     "pretest": "npm run lint",
     "test": "npm run test:browser && npm run test:node",
-    "build:lokijs": "uglifyjs src/lokijs.js > build/lokijs.min.js",
-    "build:indexedAdapter": "uglifyjs src/loki-indexed-adapter.js > build/loki-indexed-adapter.min.js",
+    "build:lokijs": "uglify-js src/lokijs.js > build/lokijs.min.js",
+    "build:indexedAdapter": "uglify-js src/loki-indexed-adapter.js > build/loki-indexed-adapter.min.js",
     "build": "npm run build:lokijs && npm run build:indexedAdapter",
     "postbuild": "karma start karma.build.conf.js --single-run",
     "prepublish": "npm run build",
@@ -48,9 +48,6 @@
   "bugs": {
     "url": "https://github.com/techfort/LokiJS/issues"
   },
-  "dependencies": {
-    "uglifyjs": "^2.4.11"
-  },
   "devDependencies": {
     "istanbul": "^0.4.4",
     "jasmine": "^2.4.1",
@@ -65,6 +62,9 @@
     "phantomjs": "^1.9.20",
     "rimraf": "^2.5.4",
     "should": "^4.6.5",
-    "uglify-js": "^2.7.0"
+    "uglify-js": "^2.8.29"
+  },
+  "dependencies": {
+    "uglifyjs": "^2.4.11"
   }
 }
