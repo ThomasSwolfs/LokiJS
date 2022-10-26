@@ -30,6 +30,7 @@
     "build:lokijs": "uglifyjs src/lokijs.js > build/lokijs.min.js",
     "build:indexedAdapter": "uglifyjs src/loki-indexed-adapter.js > build/loki-indexed-adapter.min.js",
     "build": "npm run build:lokijs && npm run build:indexedAdapter",
+    "postbuild": "karma start karma.build.conf.js --single-run",
     "prepublish": "npm run build",
     "clean": "rimraf build/* coverage/* node_modules",
     "pour:beer": "echo New npm version published, one beer for you !",
@@ -47,7 +48,7 @@
   "bugs": {
     "url": "https://github.com/techfort/LokiJS/issues"
   },
-  "devDependencies": {
+  "dependencies": {
     "istanbul": "^0.4.4",
     "jasmine": "^2.99.0",
     "jsdoc": "^3.5.5",
