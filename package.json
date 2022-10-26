@@ -11,6 +11,7 @@
     "type": "git",
     "url": "https://github.com/ThomasSwolfs/LokiJS"
   },
+  "types": "types/index.d.ts",
   "keywords": [
     "javascript",
     "document-oriented",
